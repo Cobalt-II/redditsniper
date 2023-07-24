@@ -1,8 +1,7 @@
 const puppeteer = require("puppeteer");
 // enter email you wish to use.
 let email = '';
-// put a password (make it strong)
-let password = '';
+const password = require("./password.js");
 
 function register(a) {
     puppeteer
