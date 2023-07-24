@@ -1,6 +1,5 @@
 const puppeteer = require("puppeteer");
-// enter the password you used to register accounts.
-let password = '';
+const password = require("./password.js");
 // enter account names here.
 let accounts = [];
 // link to the reddit post you want to snipe.
