@@ -21,14 +21,13 @@ function k(name, type) {
             await page.type('input[id="loginUsername"]', name);
             await page.type('input[id="loginPassword"]', password);
             await page.$eval('button[type="submit"]', e => e.click());
-            await page.waitForTimeout(1000);
-            await page.$eval('a', e => e.click());
-            await page.waitForTimeout(2000);
+            await page.waitForTimeout(5000);
             if (!type) {
                 await page.$eval('button[aria-label="downvote"]', e => e.click());
             } else {
                 await page.$eval('button[aria-label="upvote"]', e => e.click());
             }
+            await browser.close();
         });
 };
 
